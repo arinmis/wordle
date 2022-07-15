@@ -5,6 +5,9 @@
 *.swp
 *.swo
 
+# ssh key
+*.pem
+
 ### OSX ###
 .DS_Store
 .AppleDouble
