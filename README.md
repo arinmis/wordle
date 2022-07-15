@@ -1,5 +1,5 @@
 # wordle
-Django REST API that responds request amount of words with the requested amount.
+Django REST API that responds requested amount of words with the requested amount.
 
 ## How to use API
 ```
