@@ -1,4 +1,4 @@
-# word-api
+# wordle
 Returns a word with requested amount of word size
 
 
