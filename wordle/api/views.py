@@ -13,8 +13,5 @@ def get_word(request, length, amount) :
         return Response(status=status.HTTP_204_NO_CONTENT)
     # remove words that has space
     selected_words = map(lambda item : item.word.lower(), sample(list(words), amount))
-    return Response({
-        "words": selected_words, 
-        "total_amount": len(words)
-        })
+    return Response({"words": selected_words})
 
