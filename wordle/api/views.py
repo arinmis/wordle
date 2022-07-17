@@ -6,8 +6,8 @@ from random import randrange, sample
 from .models import Word
 
 @api_view(['GET'])
-def get_word(request, length, amount) :
-    words = Word.objects.annotate(text_len=Length('word')).filter(text_len=length)
+def get_word(request, lang, length, amount) :
+    words = Word.objects.annotate(text_len=Length('word')).filter(text_len=length, lang=lang)
     # no word found 
     if (len(words) == 0 or amount > len(words) ):
         return Response(status=status.HTTP_204_NO_CONTENT)
