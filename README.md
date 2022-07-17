@@ -8,6 +8,6 @@ Django REST API that responds requested amount of words with the requested word 
 
 To get 5 word with length 3 with curl
 ```
-curl -k https://3.68.135.14/api/en/word/3/5
-curl -k https://3.68.135.14/api/tr/word/3/5
+curl -k https://3.68.135.14/api/word/en/3/5
+curl -k https://3.68.135.14/api/word/tr/3/5
 ```
