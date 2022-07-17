@@ -23,14 +23,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-29h&2@2qv!$00phk9v6s1w7ol%f57va!@b4=-w*d+#j*(%=yw7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False 
+DEBUG = True 
 
-ALLOWED_HOSTS = ['3.68.135.14']
+ALLOWED_HOSTS = ['3.68.135.14', "127.0.0.1"]
 
 # Application definition
 
 INSTALLED_APPS = [
     'rest_framework',
+    'corsheaders',
     'api.apps.ApiConfig', 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
